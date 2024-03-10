@@ -1,0 +1,64 @@
+.img-feed{
+    width: 400px;
+    height: 400px;
+    padding: 5px;
+}
+#botonCrearPost {
+    margin-right: 4px;
+}
+
+.post {
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+    background: white;
+    width: 500px; 
+    margin:auto;  /* hace que el contenedor padre se ajuste verticalmente a la cantidad de cajas*/
+    margin-top: 20px;
+
+    
+}
+
+.encabezado {
+    display:flex;
+    padding: 10px;
+}
+
+div.encabezado i { 
+    padding: 5px;
+    font-size: 30px;  /* Para los iconos el tamaño se trabaja con font-size*/
+}
+
+.encabezado h3, p {
+    margin:0;
+    font-size: medium;
+}
+
+#fecha {
+    margin-left: auto; /* hace que el icono se alinie a la derecha*/
+    align-items: center;
+    margin-top: 10px;
+}
+
+.imagen img {
+    width:100%;
+}
+
+#likes {
+    margin-top: 15px;
+    margin-left: 8px;
+    margin-right: 5px;
+}
+
+.descripcion {
+    margin-top: 10px;
+    margin-left: 8px;
+    margin-right: 5px;
+    padding-bottom: 10px;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color:blue;
+}
+.nav-pills .nav-link {
+    color: blue;
+}

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="container">
+        <!-- Content here -->
+        <!--navbar-->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid d-flex">
+                <!--Instagran Logo-->
+                <a class="navbar-brand me-auto" href="#"><i class="fa-brands fa-instagram"></i> Instagram</a>             
+                <!--menu desplegable-->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <!--Boton crear post-->
+                        <button class="btn btn-success" data-bs-toggle="modal" type="button"
+                            data-bs-target="#ventanaemergente" id="botonCrearPost">Create a new post</button>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle bg-secondary btn text-light" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-solid fa-gear"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Profile</a></li>
+                                <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                                <li><a class="dropdown-item" href="#">Privacy and data</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <nav>
+            <!--Tabs para seleccionar vista-->
+            <div class="nav justify-content-center" id="nav-tab" role="tablist">
+                <button class="nav-link active text-dark" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
+                    type="button" role="tab" aria-controls="nav-home" aria-selected="true"><i class="fa-solid fa-grip"></i></button>
+                <button class="nav-link text-dark" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
+                    type="button" role="tab" aria-controls="nav-profile" aria-selected="false"><i class="fa-solid fa-square"></i></button>
+            </div>
+        </nav>
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"
+                tabindex="0">
+                <!--Nueve imagenes-->
+                <!--Primera fila-->
+                <div class="row">
+                    <div class="col-lg-4 gx-1"><img class="w-100"
+                            src="https://images.unsplash.com/photo-1682687218982-6c508299e107?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></img>
+                    </div>
+                    <div class="col-lg-4 gx-1"><img class="w-100"
+                            src="https://images.unsplash.com/photo-1682687980918-3c2149a8f110?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></img>
+                    </div>
+                    <div class="col-lg-4 gx-1"><img class="w-100"
+                            src="https://images.unsplash.com/photo-1707343848655-a196bfe88861?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></img>
+                    </div>
+                </div>
+                <!--Segunda fila-->
+                <div class="row">
+                    <div class="col-lg-4 gx-1 gy-1"><img class="w-100"
+                            src="https://images.unsplash.com/photo-1709056842165-20d5f72064b0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></img>
+                    </div>
+                    <div class="col-lg-4 gx-1 gy-1"><img class="w-100"
+                            src="https://images.unsplash.com/photo-1708953016468-f85bc07af823?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></img>
+                    </div>
+                    <div class="col-lg-4 gx-1 gy-1"><img class="w-100"
+                            src="https://images.unsplash.com/photo-1707343843598-39755549ac9a?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></img>
+                    </div>
+                </div>
+                <!--Tercera fila-->
+                <div class="row">
+                    <div class="col-lg-4 gx-1 gy-1"><img class="w-100"
+                            src="https://images.unsplash.com/photo-1707057539184-27e90364e30a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></img>
+                    </div>
+                    <div class="col-lg-4 gx-1 gy-1"><img class="w-100"
+                            src="https://plus.unsplash.com/premium_photo-1681582960531-7b5de57fb276?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></img>
+                    </div>
+                    <div class="col-lg-4 gx-1 gy-1"><img class="w-100"
+                            src="https://images.unsplash.com/photo-1707327956851-30a531b70cda?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></img>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+                <!--Codigo para la segunda vista-->
+                <!--Primera foto-->
+                <div class="post border">
+                    <div class="encabezado">
+                        <div>
+                            <h2>Atardecer en las montañas.</h2>
+                        </div>
+                        <div id="fecha">
+                            08/26
+                        </div>
+                    </div>
+                    <div class="imagen">
+                        <img src="https://images.unsplash.com/photo-1682687218982-6c508299e107?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></img>
+                    </div> 
+                    <div id="likes"> 
+                        <strong>244 Likes</strong>
+                    </div>
+                    <div class="descripcion">
+                        <p>Te gusta esta foto, te leo en los comentarios. </p>
+                    </div>
+                </div>
+                <!--segunda foto-->
+                <div class="post border">
+                    <div class="encabezado">
+                        <div>
+                            <h2>Cuevas.</h2>
+                        </div>
+                        <div id="fecha">
+                            08/26
+                        </div>
+                    </div>
+                    <div class="imagen">
+                        <img src="https://images.unsplash.com/photo-1682687980918-3c2149a8f110?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></img>
+                    </div> 
+                    <div id="likes"> 
+                        <strong>18 Likes</strong>
+                    </div>
+                    <div class="descripcion">
+                        <p>Te gusta esta foto, te leo en los comentarios. </p>
+                    </div>
+                </div>
+                <!--tercera foto-->
+                <div class="post border">
+                    <div class="encabezado">
+                        <div>
+                            <h2>Buceando en los roques.</h2>
+                        </div>
+                        <div id="fecha">
+                            08/26
+                        </div>
+                    </div>
+                    <div class="imagen">
+                        <img src="https://images.unsplash.com/photo-1707343848655-a196bfe88861?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></img>
+                    </div> 
+                    <div id="likes"> 
+                        <strong>250 Likes</strong>
+                    </div>
+                    <div class="descripcion">
+                        <p>Te gusta esta foto, te leo en los comentarios. </p>
+                    </div>
+                </div>
+                <!--cuarta foto-->
+                <div class="post border">
+                    <div class="encabezado">
+                        <div>
+                            <h2>Felicidad.</h2>
+                        </div>
+                        <div id="fecha">
+                            08/26
+                        </div>
+                    </div>
+                    <div class="imagen">
+                        <img src="https://images.unsplash.com/photo-1709056842165-20d5f72064b0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></img>
+                    </div> 
+                    <div id="likes"> 
+                        <strong>300 Likes</strong>
+                    </div>
+                    <div class="descripcion">
+                        <p>Te gusta esta foto, te leo en los comentarios. </p>
+                    </div>
+                </div>
+                <!--quinta foto-->
+                <div class="post border">
+                    <div class="encabezado">
+                        <div>
+                            <h2>Formas.</h2>
+                        </div>
+                        <div id="fecha">
+                            08/26
+                        </div>
+                    </div>
+                    <div class="imagen">
+                        <img src="https://images.unsplash.com/photo-1708953016468-f85bc07af823?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></img>
+                    </div> 
+                    <div id="likes"> 
+                        <strong>150 Likes</strong>
+                    </div>
+                    <div class="descripcion">
+                        <p>Te gusta esta foto, te leo en los comentarios. </p>
+                    </div>
+                </div>
+                <!--sexta foto-->
+                <div class="post border">
+                    <div class="encabezado">
+                        <div>
+                            <h2>La costa.</h2>
+                        </div>
+                        <div id="fecha">
+                            08/26
+                        </div>
+                    </div>
+                    <div class="imagen">
+                        <img src="https://images.unsplash.com/photo-1707343843598-39755549ac9a?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></img>
+                    </div> 
+                    <div id="likes"> 
+                        <strong>204 Likes</strong>
+                    </div>
+                    <div class="descripcion">
+                        <p>Te gusta esta foto, te leo en los comentarios. </p>
+                    </div>
+                </div>
+                <!--septima foto-->
+                <div class="post border">
+                    <div class="encabezado">
+                        <div>
+                            <h2>Vìa lactea.</h2>
+                        </div>
+                        <div id="fecha">
+                            08/26
+                        </div>
+                    </div>
+                    <div class="imagen">
+                        <img src="https://images.unsplash.com/photo-1707057539184-27e90364e30a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></img>
+                    </div> 
+                    <div id="likes"> 
+                        <strong>300 Likes</strong>
+                    </div>
+                    <div class="descripcion">
+                        <p>Te gusta esta foto, te leo en los comentarios. </p>
+                    </div>
+                </div>
+                <!--octava foto-->
+                <div class="post border">
+                    <div class="encabezado">
+                        <div>
+                            <h2>Morrocoy.</h2>
+                        </div>
+                        <div id="fecha">
+                            08/26
+                        </div>
+                    </div>
+                    <div class="imagen">
+                        <img src="https://plus.unsplash.com/premium_photo-1681582960531-7b5de57fb276?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></img>
+                    </div> 
+                    <div id="likes"> 
+                        <strong>108 Likes</strong>
+                    </div>
+                    <div class="descripcion">
+                        <p>Te gusta esta foto, te leo en los comentarios. </p>
+                    </div>
+                </div>
+                <!--novena foto-->
+                <div class="post border">
+                    <div class="encabezado">
+                        <div>
+                            <h2>Arrecife de coral.</h2>
+                        </div>
+                        <div id="fecha">
+                            08/26
+                        </div>
+                    </div>
+                    <div class="imagen">
+                        <img src="https://images.unsplash.com/photo-1707327956851-30a531b70cda?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"></img>
+                    </div> 
+                    <div id="likes"> 
+                        <strong>248 Likes</strong>
+                    </div>
+                    <div class="descripcion">
+                        <p>Te gusta esta foto, te leo en los comentarios. </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--Modal (Ventana emergente)-->
+    <div class="modal" tabindex="-1" id="ventanaemergente">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Create a new post</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Caption:</p>
+                    <div class="input-group flex-nowrap">
+                        <span class="input-text" id="addon"></span>
+                        <input type="text" class="form-control" placeholder="Add the caption of your post here"
+                            aria-label="Username">
+                    </div>
+                    <span><i class="fa-solid fa-camera bg-light btn"></i>
+                        <i class="fa-solid fa-location-dot bg-light btn"></i></span>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success">Publish</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
